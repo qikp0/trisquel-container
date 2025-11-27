@@ -21,7 +21,7 @@ jobs:
     permissions:
       packages: write
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v6
       
       - run: echo "${{secrets.GITHUB_TOKEN}}" | podman login -u "${{github.actor}}" --password-stdin ghcr.io
       
